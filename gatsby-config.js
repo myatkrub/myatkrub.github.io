@@ -8,7 +8,7 @@ module.exports = {
     description: `A starter blog of Gatsby can do.`,
     siteUrl: `https://myatkrub.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `myatkrub`,
     },
   },
   plugins: [
