@@ -1,25 +1,26 @@
-language: node_js
-cache:
-  directories:
-    - ~/.npm
-notifications:
-  email:
-    recipients:
-      - myatkrub@me.com
-    on_success: always
-    on_failure: always
-node_js:
-  - '9'
-git:
-  depth: 3
-script:
-  - yarn build
-deploy:
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: public
-  target-branch: master
-  on:
-    branch: develop
+on:
+  push:
+    branches:
+      - gh-pages
+name: build gatsby
+jobs:
+  build_gatsby:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: yarn install
+        run: yarn install
+
+      - name: gatsby build
+        env:
+          GH_API_KEY: ${{ secrets.GITHUB_API_KEY }}
+        run: yarn build
+
+      - name: deploy
+        uses: maxheld83/ghpages@v0.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GITHUB_API_KEY }}
+          BUILD_DIR: "public/"
