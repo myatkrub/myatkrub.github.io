@@ -5,7 +5,7 @@ module.exports = {
       name: `Myat`,
       summary: `who lives and works in Bangkok building useful things.`,
     },
-    description: `A starter blog of Gatsby can do.`,
+    description: `Myat's Teach Blog`,
     siteUrl: `https://myatkrub.github.io/`,
     social: {
       twitter: `myatkrub`,
