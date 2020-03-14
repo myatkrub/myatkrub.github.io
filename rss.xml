@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Myat's Blog]]></title><description><![CDATA[Myat's Teach Blog]]></description><link>https://myatkrub.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 14 Mar 2020 13:00:25 GMT</lastBuildDate><item><title><![CDATA[Sweet Alert ကို User Event Script မှာအသုံးပြုခြင်း]]></title><description><![CDATA[Sweet Alert JS အား NetSuite User Event Script မှာအသုံးပြုချင်ရင် အောက်ပါ Code အားအသုံးပြုစမ်းသပ်နိုင်ပါသည်။  Sweet Alert Script UserEvent…]]></description><link>https://myatkrub.github.io/sweetalert-userevent-netsuite/</link><guid isPermaLink="false">https://myatkrub.github.io/sweetalert-userevent-netsuite/</guid><pubDate>Sat, 14 Mar 2020 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c2b89130d00e47ea6d2d2ca6aef04382/699b7/alert.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.74496644295302%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABcUlEQVQoz41SXU7CQBDuFTyAidcyHEI9gxELtGCi8QA+yYsJvBKjJARaoMhuCQ+GF41FgSJBqtbt7tbZBZrSSOJ00t35+TrzzVTR9HypXLasjmGYptlMKPiEO+4xzHbbKpXKer6gnKTVLkJhGDLGwn/IMg1hfJrJKlAZYwx2EAQsJoQSwsgcHkrifkopJNu2nS+cKdmctgQnKjNOR/5o+jOFC+c8URnAom01p1kI/9k2D/m2tlfg46x292CDTWNg3/dns9lcymQyIYRsq6w3kR15lx0CptfrPUpBCHmeF4UiMAxLUdUM3pw2JEUfCmA8azOKwrvf759fXCrpTK7VTXKGtr8+vW9vEYjTAzPRtmk0jg4PgLN+2xFgsl6VJM8/KH/2GeiCQilOoxVK/sXrq73dHcG5FeMsJidnXHRpakBAb96Z3NxG5Wr1PpXaFz9JrVZzXddxnKEUOEavQ/zkVAYvoHB5k85V1HHG43G93gDOv2RmhHPKm2lTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alert&quot;
+        title=&quot;alert&quot;
+        src=&quot;/static/c2b89130d00e47ea6d2d2ca6aef04382/fcda8/alert.png&quot;
+        srcset=&quot;/static/c2b89130d00e47ea6d2d2ca6aef04382/12f09/alert.png 148w,
+/static/c2b89130d00e47ea6d2d2ca6aef04382/e4a3f/alert.png 295w,
+/static/c2b89130d00e47ea6d2d2ca6aef04382/fcda8/alert.png 590w,
+/static/c2b89130d00e47ea6d2d2ca6aef04382/699b7/alert.png 596w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sweet Alert JS&lt;/strong&gt; အား NetSuite User Event Script မှာအသုံးပြုချင်ရင် အောက်ပါ Code အားအသုံးပြုစမ်းသပ်နိုင်ပါသည်။ &lt;/p&gt;
+&lt;p&gt;Sweet Alert Script&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;swal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello Myatkrub!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;UserEvent Script&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;beforeLoad&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;type&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; form&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; request&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;type &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;create&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; sweet &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        sweet &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&amp;lt;html&gt;&amp;lt;body&gt;&amp;lt;script src=&quot;https://unpkg.com/sweetalert/dist/sweetalert.min.js&quot;&gt;&amp;lt;/script&gt;&amp;lt;script type=\&apos;text/javascript\&apos;&gt;swal(&quot;Hello Myatkrub!&quot;)&amp;lt;/script&gt;&amp;lt;/body&gt;&amp;lt;/html&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; field &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; form&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addField&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;custpage_alertfield&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;inlinehtml&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        field&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setDefaultValue&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sweet&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;တခြား alert, pup up များကို&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;https://sweetalert.js.org/&quot;&gt;https://sweetalert.js.org/&lt;/a&gt;  တွင်သွားရောက် လေ့လာနိုင်ပါကြောင်း… &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Saved Search တွင် RFM Analysis ပြုလုပ်ခြင်း]]></title><description><![CDATA[RFM Analysis ဆိုတာဘာလဲ  RFM ဆိုတာကကော? 👀  credit RAA RFM…]]></description><link>https://myatkrub.github.io/rfm-savedsearch-netsuite/</link><guid isPermaLink="false">https://myatkrub.github.io/rfm-savedsearch-netsuite/</guid><pubDate>Thu, 12 Mar 2020 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;RFM Analysis ဆိုတာဘာလဲ &lt;br&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;RFM ဆိုတာကကော?&lt;/strong&gt; 👀 &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.retailreco.com/blog/wp-content/uploads/2018/11/RFM-Analytics.jpg&quot; alt=&quot;credit RAA&quot;&gt;&lt;/p&gt;
+&lt;p&gt;RFM (မကြာမီ၊ အကြိမ်ရေ၊ ငွေကြေး) ခွဲခြမ်းစိတ်ဖြာခြင်းသည်စျေးကွက်ရှာဖွေရေးနည်းစနစ်ဖြစ်ပြီးသုံးစွဲသူများသည်မည်သည့်လတ်တလောဝယ်ယူသူမည်မျှဝယ်ယူသည် (recency)၊ မည်မျှဝယ်သည် (ကြိမ်နှုန်း) နှင့်သုံးစွဲသူမည်မျှသုံးစွဲသည်ကိုဆန်းစစ်ခြင်းအားဖြင့်မည်သည့်စားသုံးသူများမည်မျှအကောင်းဆုံးဖြစ်သည်ကိုဆုံးဖြတ်ရန်အသုံးပြုသည်။ RFM ခွဲခြမ်းစိတ်ဖြာခြင်းသည်သင်၏စီးပွားရေးလုပ်ငန်း၏ ၈၀% သည်သင့်ဖောက်သည်များ၏ ၂၀% မှလာသည်ဟူသောစျေးကွက်ရှာဖွေရေးအပေါ်အခြေခံသည်။&lt;/p&gt;
+&lt;h5&gt;NetSuite Saved Search တွင် ဘယ်လို ပြုလုပ်မှာလဲ?&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/p6mmpcg.png&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Reports &gt; Saved Searches &gt; All Saved Searches &gt; New ကိုနိုပ်ပါ&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Search Title = RFM Analysis&lt;/strong&gt;&lt;/u&gt; ဟုပေးပါ&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;Criteria&lt;/strong&gt;&lt;/u&gt; : Type = Invoice , Tax Line = false , Main Line = false&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/FdMtYEc.png&quot; alt=&quot;alt text&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;In Results:&lt;/strong&gt;&lt;/u&gt; &lt;br&gt;&lt;br&gt; Tab တွင်
+Sort by = Amount &lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;https://i.imgur.com/Nv1JuCC.png&quot; alt=&quot;alt text&quot;&gt;
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Field : Name , Summary Type = Group By , Label = Customer Name &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Field : Formula(Percent) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC)&lt;/code&gt;
+, Label = %Recency
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Percent) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC)&lt;/code&gt;
+, Label = %Frequency
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Percent) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;PERCENT_RANK() OVER(ORDER BY SUM({amount}) ASC)&lt;/code&gt;
+, Label = %Monetary
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Text) , Summary Type = Maximum ,
+&lt;code class=&quot;language-text&quot;&gt;CASE WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC) BETWEEN 0.0 and 0.2 THEN 1 WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC) BETWEEN 0.2 and 0.4 THEN 2 WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC)  BETWEEN 0.4 and 0.6 THEN 3 WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC) BETWEEN 0.6 and 0.8 THEN 4 ELSE 5 END || CASE WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.0 and 0.2 THEN 1 WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.2 and 0.4 THEN 2 WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.4 and 0.6 THEN 3 WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.6 and 0.8 THEN 4 ELSE 5 END || CASE WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.0 and 0.2 THEN 1 WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.2 and 0.4 THEN 2 WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.4 and 0.6 THEN 3 WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.6 and 0.8 THEN 4 ELSE 5 END&lt;/code&gt;
+, Label = RFM
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Numeric) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;CASE WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC) BETWEEN 0.0 and 0.2 THEN 1 WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC) BETWEEN 0.2 and 0.4 THEN 2 WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC)  BETWEEN 0.4 and 0.6 THEN 3 WHEN PERCENT_RANK() OVER(ORDER BY ROUND({today}-MAX({trandate})) DESC) BETWEEN 0.6 and 0.8 THEN 4 ELSE 5 END&lt;/code&gt;
+, Label = R
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Numeric) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;CASE WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.0 and 0.2 THEN 1 WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.2 and 0.4 THEN 2 WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.4 and 0.6 THEN 3 WHEN PERCENT_RANK() OVER(ORDER BY SUM({internalid}) ASC) BETWEEN 0.6 and 0.8 THEN 4 ELSE 5 END&lt;/code&gt;
+, Label = F
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Numeric) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;CASE WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.0 and 0.2 THEN 1 WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.2 and 0.4 THEN 2 WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.4 and 0.6 THEN 3 WHEN PERCENT_RANK() OVER(ORDER BY SUM({Amount}) ASC) BETWEEN 0.6 and 0.8 THEN 4 ELSE 5 END&lt;/code&gt;
+, Label = M
+&lt;br&gt;&lt;br&gt;
+Field : Formula(Numeric) , Summary Type = Sum ,
+&lt;code class=&quot;language-text&quot;&gt;ROUND({today}-MAX({trandate}))&lt;/code&gt;
+, Label = Days from Last Purchased
+&lt;br&gt;&lt;br&gt;
+Field : Document Number , Summary Type = Count , Label = Orders
+&lt;br&gt;&lt;br&gt;
+Field : Amount , Summary Type = Sum , Label = Amount
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;မှတ်ချက်&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ပုံမှန်အားဖြင့် RFM တန်ဖိုးကို 111 ဟုသတ်မှတ်ထားရာတွင် ဒီဖော်မြူလာတွင် 555 ဟုသတ်မှတ်ထားပါသည်။ &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Have Fun! 🦄&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Webstorm IDE တွင် SuiteCloud IDE Plug-in အားထည့်သွင်းခြင်း]]></title><description><![CDATA[၁။ WebStorm ဖွင့်ပါ။  ၂။ သင်၏ကွန်ပျူတာ OS စနစ်ပေါ် မူတည်၍ အောက်ပါတို့မှတစ်ခုကိုပြုလုပ်ပါ။ အကယ်၍ သင်သည် Windows OS ကိုအသုံးပြုနေလျှင် File…]]></description><link>https://myatkrub.github.io/adding-suitecloudide-webstorm/</link><guid isPermaLink="false">https://myatkrub.github.io/adding-suitecloudide-webstorm/</guid><pubDate>Tue, 10 Mar 2020 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 512px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/536fbcfa656653ac2e2032bdf3033364/01e7c/wslogo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAEbklEQVQ4y32UfUxTVxjG33uLWtRNRLKALWzAshE3ZghLSJap8SPbsj/mFnVk2dcfzoBoNNucMYoJRBDnBx92K6KhfIhYFoTBnFPCWIdm4FbmgHKhUFihoIVsq24hKLe9z845QKNm7k2enHNvzvvr877nvSWaC7syn+kNpqtMXzPF0P3xy2Aq2Z17cHt9rd/3yt3uifcdZ0YONn/QX17/ouPym/zI6p5GmYPimA5QR28f9bhBXS6Q43fQz45Jauv8RH+tfQ2197dQ1yAab2cCk2vhmkjFV7f2Ye9wMVZ727D41xv9VA9pztkIuW6BJ9ANp596R5iGVeofg+SeALnGETHqxvV/dgWAVap36r1Ave+gtveWJfCy+wd/aKfjHnUNQepQXp8DtlLnAIdNU6tdo9IqTa6sAVmqA1K51U/l1sDRhlS/syVR++bKOi3/4jva1rqP8VLN59rjZaWglusqDYxBtGkWWER9HjBn01R6DuyNNqv/2yP47rhJo/5R3qK7jPUMB6aTMgzJ6VHJbNESYmNRYDKJhLdTU7GFie9PnDiG9evWwmz+ErYfbdi67aMZYGExmCGVtYm7zObAtexCIPV5NDpVri1fGgY1EMDKlSvR1tYmlJycDK/Xi/b2dthsNmzPyEDu4cP3A/3iMu3KAAcamN0pcnogV9SIki43NaGiogJDQ0NCVVVVsFqtyMrKgs/nQ2ZmJgxGo3AuFZ0KiJJngOlEHcoCuu5wSv1ezLPUBPivZuzYCR61tbVCPNLT0wVg48aN+PbSJXjHxxG1bJlGR4s0iU0E/fTbzuDMyle7L4Y4/8S8EqvKkxJWrBCQtLQ0IR4xMTE4dOgQCgsLsWv3btxTVcQZDQEGBAP+TQ1NkUFgyPddBfN772Deyepp7lDS6ZCTk4P4+Hih3Nxc4S4lJQWVlZVobm7Gps2bZ0ouLFZp7A6ovas4CFzwXWea3v4H5udX+wVQ1uGh8XiUNCowa+QUYzPNepgggKF1HasWtd5E6LHq/5q1oCRJgizLXJqs082c48A+j7hUBrwogAvLbIbHroxMhuadRwgDPvd8osbHJjHxBSQlJSGa9e8BV3yVJC3ocNQHMSl2Zb8A6veZ9EsvjTn0OTVYulDvP3X6jHaejUkF69eFC3Vs7nbMOGTOBIg5Zc+8PQE6WQIa9NZR07WnBSz8bK8s1oabjUvyGvhB9RGf2YMuJe5SBm149bPgZXT06iiiXAnh+4gqV35EaQ+WbC+aCttpVsMyzP7wdHMgdD8r6SRToRmUz9YvzH65yAL9u59WsbT1zE24gJlO68T6RImim1l7Pow654XBehvGah+MZ/9CtGUC0SWjCK/3+CUH+15dHnWRzTNttIzj2TJs4HkFYIbf2iLN/tEQRZoVsY8scS6KNDnWROXf2Lb8RJfJcLy7xXi02xV9xDEVlzcEo9mNqFI34vPceCrboRkOtMaKyjblyfRwzEEfjicPK4uZEmKOKK/FZit74rKUcvZsZ2pmCp0980DOv/tC4/GXiNUTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;wslogo&quot;
+        title=&quot;wslogo&quot;
+        src=&quot;/static/536fbcfa656653ac2e2032bdf3033364/01e7c/wslogo.png&quot;
+        srcset=&quot;/static/536fbcfa656653ac2e2032bdf3033364/12f09/wslogo.png 148w,
+/static/536fbcfa656653ac2e2032bdf3033364/e4a3f/wslogo.png 295w,
+/static/536fbcfa656653ac2e2032bdf3033364/01e7c/wslogo.png 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;၁။ WebStorm ဖွင့်ပါ။ &lt;/p&gt;
+&lt;p&gt;၂။ သင်၏ကွန်ပျူတာ OS စနစ်ပေါ် မူတည်၍ အောက်ပါတို့မှတစ်ခုကိုပြုလုပ်ပါ။&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;အကယ်၍ သင်သည် Windows OS ကိုအသုံးပြုနေလျှင် File&gt; Settings ကိုရွေးချယ်ပါ။****&lt;/li&gt;
+&lt;li&gt;Mac OS ကိုအသုံးပြုနေလျှင် WebStorm&gt; Preferences ကိုရွေးချယ်ပါ။&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;၃။ &lt;strong&gt;Plugins&gt; Browse repositories&lt;/strong&gt; ကိုရွေးချယ်ပါ။&lt;/p&gt;
+&lt;p&gt;၄။ &lt;strong&gt;Manage repositories&lt;/strong&gt; ကိုရွေးချယ်ပါ။&lt;/p&gt;
+&lt;p&gt;၅။ SuiteCloud IDE plug-in update site ကို Repository URL နေရာတွင်ထည့်သွင်းရန်၊&lt;/p&gt;
+&lt;p&gt;သင်ပလပ်အင်ကိုအသစ်ပြောင်းသည့်အချိန်တိုင်းတွင်နောက်ဆုံးပေါ်အပြောင်းအလဲများကိုအလိုအလျောက်ရလိုလျှင်အသုံးပြုပါ&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://system.netsuite.com/download/suitecloud-sdk/ideplugin/webstorm/latest/updatePlugins.xml&quot;&gt;https://system.netsuite.com/download/suitecloud-sdk/ideplugin/webstorm/latest/updatePlugins.xml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;သင်၏အကောင့်သည်ဗားရှင်း ၁၉.၂ တွင်ရှိပါက&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://system.netsuite.com/download/suitecloud-sdk/ideplugin/webstorm/19.2/updatePlugins.xml&quot;&gt;https://system.netsuite.com/download/suitecloud-sdk/ideplugin/webstorm/19.2/updatePlugins.xml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;၆။ &lt;strong&gt;OK&lt;/strong&gt; ကိုနှိပ်ပါ။&lt;/p&gt;
+&lt;p&gt;၇။ ပေါ်လာသည့် &lt;strong&gt;com.netsuite.ide.webstorm.app&lt;/strong&gt; plugin ကိုနှိပ်ပါ။ Install ကိုနှိပ်ပါ။&lt;/p&gt;
+&lt;p&gt;၈။  WebStorm ကို restart လုပ်ပါ။&lt;/p&gt;</content:encoded></item></channel></rss>
